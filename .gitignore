@@ -1,0 +1,8 @@
+**/target/
+**/node_modules/
+**/.idea/
+**/*.log
+**/*.class
+jSS7/.git/
+sctp/.git/
+*.tar.gz
