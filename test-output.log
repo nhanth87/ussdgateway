@@ -1,0 +1,936 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 82 modules...
+[INFO] Not installing Nexus Staging features:
+[INFO]  * Preexisting staging related goal bindings found in 82 modules.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] RestComm jSS7 :: ss7-parent                                        [pom]
+[INFO] Restcomm jSS7 :: Scheduler :: scheduler                            [jar]
+[INFO] Restcomm jSS7 :: Congestion :: congestion                          [jar]
+[INFO] Restcomm jSS7 :: Statistics :: Parent :: statistics-parent         [pom]
+[INFO] Restcomm jSS7 :: Statistics :: Api :: statistics-api               [jar]
+[INFO] Restcomm jSS7 :: Statistics :: Impl :: statistics-impl             [jar]
+[INFO] Restcomm jSS7 :: management                                        [pom]
+[INFO] Restcomm jSS7 :: Management :: shell-transport                     [jar]
+[INFO] Restcomm jSS7 :: Management :: shell-client                        [jar]
+[INFO] Restcomm jSS7 :: Management :: shell-server-api                    [jar]
+[INFO] Restcomm jSS7 :: Management :: shell-server-impl                   [jar]
+[INFO] Restcomm jSS7 :: Management :: shell-test                          [jar]
+[INFO] Restcomm jSS7 :: SS7-Ext :: Parent :: ss7-ext-parent               [pom]
+[INFO] Restcomm jSS7 :: SS7-Ext :: API :: ss7-ext-api                     [jar]
+[INFO] Restcomm jSS7 :: SS7-Ext :: IMPL :: ss7-ext-impl                   [jar]
+[INFO] Restcomm jSS7 :: MTP :: Parent :: mtp-parent                       [pom]
+[INFO] Restcomm jSS7 :: MTP :: Impl :: mtp-api                            [jar]
+[INFO] Restcomm jSS7 :: MTP :: Impl :: mtp                                [jar]
+[INFO] Restcomm jSS7 :: M3UA :: Parent :: m3ua                            [pom]
+[INFO] Restcomm jSS7 :: M3UA :: Api :: m3ua-api                           [jar]
+[INFO] Restcomm jSS7 :: M3UA :: Impl :: m3ua-impl                         [jar]
+[INFO] Restcomm jSS7 :: M3UA :: CLI :: m3ua-cli-sctp                      [jar]
+[INFO] Restcomm jSS7 :: M3UA :: CLI :: m3ua-cli-m3ua                      [jar]
+[INFO] Restcomm jSS7 :: ISUP :: Parent :: isup-parent                     [pom]
+[INFO] Restcomm jSS7 :: ISUP :: Api :: isup-api                           [jar]
+[INFO] Restcomm jSS7 :: ISUP :: Impl :: isup-impl                         [jar]
+[INFO] Restcomm jSS7 :: SCCP :: Parent :: sccp-parent                     [pom]
+[INFO] Restcomm jSS7 :: SCCP :: Api :: sccp-api                           [jar]
+[INFO] Restcomm jSS7 :: SCCP :: Impl :: sccp-impl                         [jar]
+[INFO] Restcomm jSS7 :: SCCP :: CLI :: sccp-cli                           [jar]
+[INFO] Restcomm jSS7 :: Extended-SCCP :: Api-Ext :: sccp-api-ext          [jar]
+[INFO] Restcomm jSS7 :: Extended-SCCP :: Impl-Ext :: sccp-impl-ext        [jar]
+[INFO] Restcomm jSS7 :: SCCP :: CLI-Ext :: sccp-cli-ext                   [jar]
+[INFO] Restcomm jSS7 :: TCAP :: Parent :: tcap-parent                     [pom]
+[INFO] Restcomm jSS7 :: TCAP :: Api :: tcap-api                           [jar]
+[INFO] Restcomm jSS7 :: TCAP :: Impl :: tcap-impl                         [jar]
+[INFO] Restcomm jSS7 :: TCAP :: CLI :: tcap-cli                           [jar]
+[INFO] Restcomm jSS7 :: TCAP-ANSI :: Parent :: tcap-ansi-parent           [pom]
+[INFO] Restcomm jSS7 :: TCAP ANSI :: Api :: tcap-ansi-api                 [jar]
+[INFO] Restcomm jSS7 :: TCAP ANSI :: Impl :: tcap-ansi-impl               [jar]
+[INFO] Restcomm jSS7 :: TCAP-ANSI :: CLI :: tcap-ansi-cli                 [jar]
+[INFO] Restcomm jSS7 :: MAP :: Parent :: map-parent                       [pom]
+[INFO] Restcomm jSS7 :: MAP :: Api :: map-api                             [jar]
+[INFO] Restcomm jSS7 :: MAP :: Impl :: map-impl                           [jar]
+[INFO] Restcomm jSS7 :: MAP :: LOAD :: map-load                           [jar]
+[INFO] Restcomm jSS7 :: INAP :: Parent :: inap-parent                     [pom]
+[INFO] Restcomm jSS7 :: INAP :: Api :: inap-api                           [jar]
+[INFO] Restcomm jSS7 :: INAP :: Impl :: inap-impl                         [jar]
+[INFO] Restcomm jSS7 :: CAP :: Parent :: cap-parent                       [pom]
+[INFO] Restcomm jSS7 :: CAP :: Api :: cap-api                             [jar]
+[INFO] Restcomm jSS7 :: CAP :: Impl :: cap-impl                           [jar]
+[INFO] Restcomm jSS7 :: SNIFFER :: Parent :: sniffer-parent               [pom]
+[INFO] Restcomm jSS7 :: SNIFFER :: Impl :: sniffer-impl                   [jar]
+[INFO] sniffer-gui Maven Webapp                                           [war]
+[INFO] Restcomm jSS7 :: Service :: restcomm-service-parent                [pom]
+[INFO] Restcomm jSS7 :: Service :: Service :: restcomm-ss7-service        [jar]
+[INFO] Restcomm jSS7 :: restcomm-ss7-oam                                  [pom]
+[INFO] Restcomm jSS7 :: restcomm-ss7-oam-common                           [pom]
+[INFO] Restcomm jSS7 :: Management-jmx :: jmx                             [jar]
+[INFO] Restcomm jSS7 :: Management-jmx :: alarm                           [jar]
+[INFO] Restcomm jSS7 :: Statistic-oam :: Parent :: statistics-oam-parent  [pom]
+[INFO] Restcomm jSS7 :: Statistic-oam :: API :: statistics-oam-api        [jar]
+[INFO] Restcomm jSS7 :: Statistic-oam :: Impl :: statistics-oam-impl      [jar]
+[INFO] Restcomm jSS7 :: Management-jmx-ss7 :: jmxss7                      [jar]
+[INFO] Restcomm jSS7 :: Management-sctp-oam :: sctp-oam                   [jar]
+[INFO] Restcomm jSS7 :: Management-jmx :: m3ua-oam                        [jar]
+[INFO] Restcomm jSS7 :: Management-jmx :: sccp-oam                        [jar]
+[INFO] Restcomm jSS7 :: Management-jmx :: tcap-oam                        [jar]
+[INFO] Restcomm jSS7 :: Management-jmx :: map-oam                         [jar]
+[INFO] Restcomm jSS7 :: Service :: WildFly :: restcomm-ss7-wildfly        [pom]
+[INFO] Restcomm jSS7 :: Service :: WildFly :: restcomm-ss7-wildfly-modules [jar]
+[INFO] Restcomm jSS7 :: Service :: WildFly :: restcomm-ss7-wildfly-extension [jar]
+[INFO] Restcomm jSS7 :: Service :: Commons :: restcomm-ss7-wildfly-commons [jar]
+[INFO] Restcomm jSS7 :: Management :: UI :: new-ui                        [war]
+[INFO] Restcomm jSS7 :: Tools :: Parent                                   [pom]
+[INFO] Restcomm jSS7 Simulator :: Parent                                  [pom]
+[INFO] Restcomm jSS7 Simulator :: Simulator core                          [jar]
+[INFO] Restcomm jSS7 Simulator :: Simulator GUI                           [jar]
+[INFO] Restcomm jSS7 Simulator :: Simulator Bootstrap                     [jar]
+[INFO] Restcomm jSS7 Trase Parser :: Parent                               [pom]
+[INFO] Restcomm jSS7 Trase Parser :: Trase Parser core                    [jar]
+[INFO] Restcomm jSS7 Trase Parser :: Trase Parser Bootstrap               [jar]
+[INFO] 
+[INFO] ---------------< org.restcomm.protocols.ss7:ss7-parent >----------------
+[INFO] Building RestComm jSS7 :: ss7-parent 9.2.7                        [1/82]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ ss7-parent ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ ss7-parent ---
+[WARNING] Ignoring project type pom - supportedProjectTypes = [jar, bundle, war]
+[INFO] 
+[INFO] -----------< org.restcomm.protocols.ss7.scheduler:scheduler >-----------
+[INFO] Building Restcomm jSS7 :: Scheduler :: scheduler 9.2.7            [2/82]
+[INFO]   from scheduler\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ scheduler ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\scheduler\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ scheduler ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ scheduler ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ scheduler ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ scheduler ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\scheduler\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ scheduler ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ scheduler ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------< org.restcomm.protocols.ss7.congestion:congestion >----------
+[INFO] Building Restcomm jSS7 :: Congestion :: congestion 9.2.7          [3/82]
+[INFO]   from congestion\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ congestion ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\congestion\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ congestion ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ congestion ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ congestion ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ congestion ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\congestion\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ congestion ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ congestion ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------< org.restcomm.protocols.ss7.statistics:statistics-parent >-------
+[INFO] Building Restcomm jSS7 :: Statistics :: Parent :: statistics-parent 9.2.7 [4/82]
+[INFO]   from statistics\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ statistics-parent ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ statistics-parent ---
+[WARNING] Ignoring project type pom - supportedProjectTypes = [jar, bundle, war]
+[INFO] 
+[INFO] --------< org.restcomm.protocols.ss7.statistics:statistics-api >--------
+[INFO] Building Restcomm jSS7 :: Statistics :: Api :: statistics-api 9.2.7 [5/82]
+[INFO]   from statistics\api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ statistics-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\statistics\api\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ statistics-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ statistics-api ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ statistics-api ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ statistics-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\statistics\api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ statistics-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ statistics-api ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------< org.restcomm.protocols.ss7.statistics:statistics-impl >--------
+[INFO] Building Restcomm jSS7 :: Statistics :: Impl :: statistics-impl 9.2.7 [6/82]
+[INFO]   from statistics\impl\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ statistics-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\statistics\impl\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ statistics-impl ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ statistics-impl ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ statistics-impl ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ statistics-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\statistics\impl\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ statistics-impl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ statistics-impl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------< org.restcomm.protocols.ss7.management:management >----------
+[INFO] Building Restcomm jSS7 :: management 9.2.7                        [7/82]
+[INFO]   from management\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ management ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ management ---
+[WARNING] Ignoring project type pom - supportedProjectTypes = [jar, bundle, war]
+[INFO] 
+[INFO] -------< org.restcomm.protocols.ss7.management:shell-transport >--------
+[INFO] Building Restcomm jSS7 :: Management :: shell-transport 9.2.7     [8/82]
+[INFO]   from management\shell-transport\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shell-transport ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ shell-transport ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ shell-transport ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ shell-transport ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shell-transport ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-transport\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ shell-transport ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ shell-transport ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Starting server
+Connecting to server
+Client connected
+Client Receive message Hello
+Client Receive message  
+Client Receive message world
+Server Receive Hello
+Server Receive  
+Server Receive world
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.028 sec - in TestSuite
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ---------< org.restcomm.protocols.ss7.management:shell-client >---------
+[INFO] Building Restcomm jSS7 :: Management :: shell-client 9.2.7        [9/82]
+[INFO]   from management\shell-client\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shell-client ---
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ shell-client ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ shell-client ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ shell-client ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shell-client ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-client\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ shell-client ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ shell-client ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.restcomm.ss7.management.console.TreeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.776 sec - in org.restcomm.ss7.management.console.TreeTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] -------< org.restcomm.protocols.ss7.management:shell-server-api >-------
+[INFO] Building Restcomm jSS7 :: Management :: shell-server-api 9.2.7   [10/82]
+[INFO]   from management\shell-server-api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shell-server-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-server-api\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ shell-server-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ shell-server-api ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ shell-server-api ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shell-server-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-server-api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ shell-server-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ shell-server-api ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------< org.restcomm.protocols.ss7.management:shell-server-impl >-------
+[INFO] Building Restcomm jSS7 :: Management :: shell-server-impl 9.2.7  [11/82]
+[INFO]   from management\shell-server-impl\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shell-server-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-server-impl\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ shell-server-impl ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ shell-server-impl ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ shell-server-impl ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shell-server-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-server-impl\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ shell-server-impl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ shell-server-impl ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------< org.restcomm.protocols.ss7.management:shell-test >----------
+[INFO] Building Restcomm jSS7 :: Management :: shell-test 9.2.7         [12/82]
+[INFO]   from management\shell-test\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shell-test ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-test\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ shell-test ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ shell-test ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ shell-test ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shell-test ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\management\shell-test\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ shell-test ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ shell-test ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.restcomm.ss7.management.console.CliTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 206.003 sec - in org.restcomm.ss7.management.console.CliTest
+
+Results :
+
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ----------< org.restcomm.protocols.ss7.ss7ext:ss7-ext-parent >----------
+[INFO] Building Restcomm jSS7 :: SS7-Ext :: Parent :: ss7-ext-parent 9.2.7 [13/82]
+[INFO]   from ss7-ext\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ ss7-ext-parent ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ ss7-ext-parent ---
+[WARNING] Ignoring project type pom - supportedProjectTypes = [jar, bundle, war]
+[INFO] 
+[INFO] -----------< org.restcomm.protocols.ss7.ss7ext:ss7-ext-api >------------
+[INFO] Building Restcomm jSS7 :: SS7-Ext :: API :: ss7-ext-api 9.2.7    [14/82]
+[INFO]   from ss7-ext\ss7-ext-api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ss7-ext-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\ss7-ext\ss7-ext-api\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ ss7-ext-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ ss7-ext-api ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ ss7-ext-api ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ss7-ext-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\ss7-ext\ss7-ext-api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ ss7-ext-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ ss7-ext-api ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] No tests to run.
+[INFO] 
+[INFO] -----------< org.restcomm.protocols.ss7.ss7ext:ss7-ext-impl >-----------
+[INFO] Building Restcomm jSS7 :: SS7-Ext :: IMPL :: ss7-ext-impl 9.2.7  [15/82]
+[INFO]   from ss7-ext\ss7-ext-impl\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ss7-ext-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\ss7-ext\ss7-ext-impl\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ ss7-ext-impl ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ ss7-ext-impl ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ ss7-ext-impl ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ss7-ext-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\ss7-ext\ss7-ext-impl\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ ss7-ext-impl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ ss7-ext-impl ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------< org.restcomm.protocols.ss7.mtp:mtp-parent >--------------
+[INFO] Building Restcomm jSS7 :: MTP :: Parent :: mtp-parent 9.2.7      [16/82]
+[INFO]   from mtp\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ mtp-parent ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ mtp-parent ---
+[WARNING] Ignoring project type pom - supportedProjectTypes = [jar, bundle, war]
+[INFO] 
+[INFO] ---------------< org.restcomm.protocols.ss7.mtp:mtp-api >---------------
+[INFO] Building Restcomm jSS7 :: MTP :: Impl :: mtp-api 9.2.7           [17/82]
+[INFO]   from mtp\mtp-api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mtp-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\mtp\mtp-api\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ mtp-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ mtp-api ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ mtp-api ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mtp-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\mtp\mtp-api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ mtp-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ mtp-api ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.restcomm.protocols.ss7.mtp.Mtp3TransferMessageTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.342 sec - in org.restcomm.protocols.ss7.mtp.Mtp3TransferMessageTest
+
+Results :
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] -----------------< org.restcomm.protocols.ss7.mtp:mtp >-----------------
+[INFO] Building Restcomm jSS7 :: MTP :: Impl :: mtp 9.2.7               [18/82]
+[INFO]   from mtp\mtp-impl\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mtp ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\mtp\mtp-impl\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ mtp ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ mtp ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ mtp ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mtp ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\mtp\mtp-impl\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ mtp ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ mtp ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------------< org.restcomm.protocols.ss7.m3ua:m3ua >----------------
+[INFO] Building Restcomm jSS7 :: M3UA :: Parent :: m3ua 9.2.7           [19/82]
+[INFO]   from m3ua\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ m3ua ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ m3ua ---
+[WARNING] Ignoring project type pom - supportedProjectTypes = [jar, bundle, war]
+[INFO] 
+[INFO] --------------< org.restcomm.protocols.ss7.m3ua:m3ua-api >--------------
+[INFO] Building Restcomm jSS7 :: M3UA :: Api :: m3ua-api 9.2.7          [20/82]
+[INFO]   from m3ua\api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ m3ua-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\api\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ m3ua-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ m3ua-api ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+Audit done.
+
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ m3ua-api ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ m3ua-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ m3ua-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ m3ua-api ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------< org.restcomm.protocols.ss7.m3ua:m3ua-impl >--------------
+[INFO] Building Restcomm jSS7 :: M3UA :: Impl :: m3ua-impl 9.2.7        [21/82]
+[INFO]   from m3ua\impl\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ m3ua-impl ---
+[INFO] skip non existing resourceDirectory C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ m3ua-impl ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- checkstyle:2.9.1:checkstyle (check-style) @ m3ua-impl ---
+[WARNING]  Parameter 'headerFile' (user property 'basedir'/LICENSE.txt) is deprecated: Use headerLocation instead.
+[INFO] Starting audit...
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\AsImpl.java:24:8: Unused import - org.restcomm.protocols.ss7.m3ua.impl.parameter.NetworkAppearanceImpl.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\AsImpl.java:26:8: Unused import - org.restcomm.protocols.ss7.m3ua.impl.parameter.RoutingContextImpl.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\AsImpl.java:27:8: Unused import - org.restcomm.protocols.ss7.m3ua.impl.parameter.TrafficModeTypeImpl.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\AspFactoryImpl.java:346: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:4:8: Unused import - java.io.BufferedReader.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:6:8: Unused import - java.io.FileInputStream.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:8:8: Unused import - java.io.FileOutputStream.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:12:8: Unused import - java.io.InputStreamReader.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:13:8: Unused import - java.io.StringReader.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:93: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAManagementImpl.java:354: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UARouteManagement.java:7:8: Unused import - java.util.concurrent.CopyOnWriteArrayList.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:6: Using the '.*' form of import should be avoided - java.io.*.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:14: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:17: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:25: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:29: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:33: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:37: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\M3UAXStreamHelper.java:41: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\message\MessageFactoryImpl.java:28:8: Unused import - org.restcomm.protocols.ss7.m3ua.impl.message.transfer.PayloadDataImpl.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\message\MessageFactoryImpl.java:42: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\message\MessageFactoryImpl.java:46: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\message\MessageFactoryImpl.java:50: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\message\MessageFactoryImpl.java:53: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:9: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:13: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:16: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:23: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:26: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:32: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:36: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:49: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:53: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:63: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:66: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:72: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:75: Line has trailing spaces.
+C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\main\java\org\restcomm\protocols\ss7\m3ua\impl\pool\PayloadDataPool.java:81: Line has trailing spaces.
+Audit done.
+
+[INFO] There are 39 checkstyle errors.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- bundle:2.3.4:manifest (bundle-manifest) @ m3ua-impl ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ m3ua-impl ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ m3ua-impl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 22 source files to C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\target\test-classes
+[INFO] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/message/AspFactoryPayloadTest.java: C:\Users\Windows\Desktop\ethiopia-working-dir\jSS7\m3ua\impl\src\test\java\org\restcomm\protocols\ss7\m3ua\impl\message\AspFactoryPayloadTest.java uses or overrides a deprecated API.
+[INFO] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/message/AspFactoryPayloadTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[744,17] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/GatewayTest.java:[329,17] cannot find symbol
+  symbol:   class FastList
+  location: class org.restcomm.protocols.ss7.m3ua.impl.GatewayTest.Mtp3UserPartListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/GatewayTest.java:[331,16] cannot find symbol
+  symbol:   class FastList
+  location: class org.restcomm.protocols.ss7.m3ua.impl.GatewayTest.Mtp3UserPartListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/SCTPShellExecutorTest.java:[28,13] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.oam.SCTPShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[691,17] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[2049,17] cannot find symbol
+  symbol:   class ArrayList
+  location: class org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.M3UAManagementEventListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[349,17] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1766,17] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[352,17] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[603,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[742,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[744,65] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/GatewayTest.java:[329,68] cannot find symbol
+  symbol:   class FastList
+  location: class org.restcomm.protocols.ss7.m3ua.impl.GatewayTest.Mtp3UserPartListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/SCTPShellExecutorTest.java:[50,36] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.oam.SCTPShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[549,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[689,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[691,65] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[1417,5] org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[1577,5] org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[1617,32] cannot find symbol
+  symbol:   method unmodifiable()
+  location: variable associations of type org.jctools.maps.NonBlockingHashMap<java.lang.String,org.mobicents.protocols.api.Association>
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[2049,55] cannot find symbol
+  symbol:   class ArrayList
+  location: class org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.M3UAManagementEventListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[77,9] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[77,67] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[201,5] org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[347,5] org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[349,65] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1615,5] org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1764,5] org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1766,65] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[204,5] org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[350,5] org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[352,69] cannot find symbol
+  symbol:   class FastMap
+  location: class org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.NettyTransportManagement
+[INFO] 32 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for RestComm jSS7 :: ss7-parent 9.2.7:
+[INFO] 
+[INFO] RestComm jSS7 :: ss7-parent ........................ SUCCESS [  2.065 s]
+[INFO] Restcomm jSS7 :: Scheduler :: scheduler ............ SUCCESS [  4.687 s]
+[INFO] Restcomm jSS7 :: Congestion :: congestion .......... SUCCESS [  0.496 s]
+[INFO] Restcomm jSS7 :: Statistics :: Parent :: statistics-parent SUCCESS [  0.015 s]
+[INFO] Restcomm jSS7 :: Statistics :: Api :: statistics-api SUCCESS [  2.173 s]
+[INFO] Restcomm jSS7 :: Statistics :: Impl :: statistics-impl SUCCESS [  0.765 s]
+[INFO] Restcomm jSS7 :: management ........................ SUCCESS [  0.038 s]
+[INFO] Restcomm jSS7 :: Management :: shell-transport ..... SUCCESS [  5.938 s]
+[INFO] Restcomm jSS7 :: Management :: shell-client ........ SUCCESS [  2.569 s]
+[INFO] Restcomm jSS7 :: Management :: shell-server-api .... SUCCESS [  0.312 s]
+[INFO] Restcomm jSS7 :: Management :: shell-server-impl ... SUCCESS [  4.113 s]
+[INFO] Restcomm jSS7 :: Management :: shell-test .......... SUCCESS [03:26 min]
+[INFO] Restcomm jSS7 :: SS7-Ext :: Parent :: ss7-ext-parent SUCCESS [  0.010 s]
+[INFO] Restcomm jSS7 :: SS7-Ext :: API :: ss7-ext-api ..... SUCCESS [  0.184 s]
+[INFO] Restcomm jSS7 :: SS7-Ext :: IMPL :: ss7-ext-impl ... SUCCESS [  0.193 s]
+[INFO] Restcomm jSS7 :: MTP :: Parent :: mtp-parent ....... SUCCESS [  0.010 s]
+[INFO] Restcomm jSS7 :: MTP :: Impl :: mtp-api ............ SUCCESS [  1.152 s]
+[INFO] Restcomm jSS7 :: MTP :: Impl :: mtp ................ SUCCESS [  0.823 s]
+[INFO] Restcomm jSS7 :: M3UA :: Parent :: m3ua ............ SUCCESS [  0.015 s]
+[INFO] Restcomm jSS7 :: M3UA :: Api :: m3ua-api ........... SUCCESS [  0.616 s]
+[INFO] Restcomm jSS7 :: M3UA :: Impl :: m3ua-impl ......... FAILURE [  5.995 s]
+[INFO] Restcomm jSS7 :: M3UA :: CLI :: m3ua-cli-sctp ...... SKIPPED
+[INFO] Restcomm jSS7 :: M3UA :: CLI :: m3ua-cli-m3ua ...... SKIPPED
+[INFO] Restcomm jSS7 :: ISUP :: Parent :: isup-parent ..... SKIPPED
+[INFO] Restcomm jSS7 :: ISUP :: Api :: isup-api ........... SKIPPED
+[INFO] Restcomm jSS7 :: ISUP :: Impl :: isup-impl ......... SKIPPED
+[INFO] Restcomm jSS7 :: SCCP :: Parent :: sccp-parent ..... SKIPPED
+[INFO] Restcomm jSS7 :: SCCP :: Api :: sccp-api ........... SKIPPED
+[INFO] Restcomm jSS7 :: SCCP :: Impl :: sccp-impl ......... SKIPPED
+[INFO] Restcomm jSS7 :: SCCP :: CLI :: sccp-cli ........... SKIPPED
+[INFO] Restcomm jSS7 :: Extended-SCCP :: Api-Ext :: sccp-api-ext SKIPPED
+[INFO] Restcomm jSS7 :: Extended-SCCP :: Impl-Ext :: sccp-impl-ext SKIPPED
+[INFO] Restcomm jSS7 :: SCCP :: CLI-Ext :: sccp-cli-ext ... SKIPPED
+[INFO] Restcomm jSS7 :: TCAP :: Parent :: tcap-parent ..... SKIPPED
+[INFO] Restcomm jSS7 :: TCAP :: Api :: tcap-api ........... SKIPPED
+[INFO] Restcomm jSS7 :: TCAP :: Impl :: tcap-impl ......... SKIPPED
+[INFO] Restcomm jSS7 :: TCAP :: CLI :: tcap-cli ........... SKIPPED
+[INFO] Restcomm jSS7 :: TCAP-ANSI :: Parent :: tcap-ansi-parent SKIPPED
+[INFO] Restcomm jSS7 :: TCAP ANSI :: Api :: tcap-ansi-api . SKIPPED
+[INFO] Restcomm jSS7 :: TCAP ANSI :: Impl :: tcap-ansi-impl SKIPPED
+[INFO] Restcomm jSS7 :: TCAP-ANSI :: CLI :: tcap-ansi-cli . SKIPPED
+[INFO] Restcomm jSS7 :: MAP :: Parent :: map-parent ....... SKIPPED
+[INFO] Restcomm jSS7 :: MAP :: Api :: map-api ............. SKIPPED
+[INFO] Restcomm jSS7 :: MAP :: Impl :: map-impl ........... SKIPPED
+[INFO] Restcomm jSS7 :: MAP :: LOAD :: map-load ........... SKIPPED
+[INFO] Restcomm jSS7 :: INAP :: Parent :: inap-parent ..... SKIPPED
+[INFO] Restcomm jSS7 :: INAP :: Api :: inap-api ........... SKIPPED
+[INFO] Restcomm jSS7 :: INAP :: Impl :: inap-impl ......... SKIPPED
+[INFO] Restcomm jSS7 :: CAP :: Parent :: cap-parent ....... SKIPPED
+[INFO] Restcomm jSS7 :: CAP :: Api :: cap-api ............. SKIPPED
+[INFO] Restcomm jSS7 :: CAP :: Impl :: cap-impl ........... SKIPPED
+[INFO] Restcomm jSS7 :: SNIFFER :: Parent :: sniffer-parent SKIPPED
+[INFO] Restcomm jSS7 :: SNIFFER :: Impl :: sniffer-impl ... SKIPPED
+[INFO] sniffer-gui Maven Webapp ........................... SKIPPED
+[INFO] Restcomm jSS7 :: Service :: restcomm-service-parent  SKIPPED
+[INFO] Restcomm jSS7 :: Service :: Service :: restcomm-ss7-service SKIPPED
+[INFO] Restcomm jSS7 :: restcomm-ss7-oam .................. SKIPPED
+[INFO] Restcomm jSS7 :: restcomm-ss7-oam-common ........... SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx :: jmx ............. SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx :: alarm ........... SKIPPED
+[INFO] Restcomm jSS7 :: Statistic-oam :: Parent :: statistics-oam-parent SKIPPED
+[INFO] Restcomm jSS7 :: Statistic-oam :: API :: statistics-oam-api SKIPPED
+[INFO] Restcomm jSS7 :: Statistic-oam :: Impl :: statistics-oam-impl SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx-ss7 :: jmxss7 ...... SKIPPED
+[INFO] Restcomm jSS7 :: Management-sctp-oam :: sctp-oam ... SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx :: m3ua-oam ........ SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx :: sccp-oam ........ SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx :: tcap-oam ........ SKIPPED
+[INFO] Restcomm jSS7 :: Management-jmx :: map-oam ......... SKIPPED
+[INFO] Restcomm jSS7 :: Service :: WildFly :: restcomm-ss7-wildfly SKIPPED
+[INFO] Restcomm jSS7 :: Service :: WildFly :: restcomm-ss7-wildfly-modules SKIPPED
+[INFO] Restcomm jSS7 :: Service :: WildFly :: restcomm-ss7-wildfly-extension SKIPPED
+[INFO] Restcomm jSS7 :: Service :: Commons :: restcomm-ss7-wildfly-commons SKIPPED
+[INFO] Restcomm jSS7 :: Management :: UI :: new-ui ........ SKIPPED
+[INFO] Restcomm jSS7 :: Tools :: Parent ................... SKIPPED
+[INFO] Restcomm jSS7 Simulator :: Parent .................. SKIPPED
+[INFO] Restcomm jSS7 Simulator :: Simulator core .......... SKIPPED
+[INFO] Restcomm jSS7 Simulator :: Simulator GUI ........... SKIPPED
+[INFO] Restcomm jSS7 Simulator :: Simulator Bootstrap ..... SKIPPED
+[INFO] Restcomm jSS7 Trase Parser :: Parent ............... SKIPPED
+[INFO] Restcomm jSS7 Trase Parser :: Trase Parser core .... SKIPPED
+[INFO] Restcomm jSS7 Trase Parser :: Trase Parser Bootstrap SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:08 min
+[INFO] Finished at: 2026-04-10T18:24:34+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project m3ua-impl: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[744,17] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/GatewayTest.java:[329,17] cannot find symbol
+[ERROR]   symbol:   class FastList
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.GatewayTest.Mtp3UserPartListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/GatewayTest.java:[331,16] cannot find symbol
+[ERROR]   symbol:   class FastList
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.GatewayTest.Mtp3UserPartListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/SCTPShellExecutorTest.java:[28,13] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.oam.SCTPShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[691,17] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[2049,17] cannot find symbol
+[ERROR]   symbol:   class ArrayList
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.M3UAManagementEventListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[349,17] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1766,17] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[352,17] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[603,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[742,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPClientFSMTest.java:[744,65] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPClientFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/GatewayTest.java:[329,68] cannot find symbol
+[ERROR]   symbol:   class FastList
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.GatewayTest.Mtp3UserPartListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/SCTPShellExecutorTest.java:[50,36] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.oam.SCTPShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[549,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[689,5] org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/IPSPServerFSMTest.java:[691,65] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.IPSPServerFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[1417,5] org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[1577,5] org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[1617,32] cannot find symbol
+[ERROR]   symbol:   method unmodifiable()
+[ERROR]   location: variable associations of type org.jctools.maps.NonBlockingHashMap<java.lang.String,org.mobicents.protocols.api.Association>
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/RemSgFSMTest.java:[2049,55] cannot find symbol
+[ERROR]   symbol:   class ArrayList
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.RemSgFSMTest.M3UAManagementEventListenerImpl
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[77,9] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[77,67] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[201,5] org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[347,5] org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/oam/M3UAShellExecutorTest.java:[349,65] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.oam.M3UAShellExecutorTest.TransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1615,5] org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1764,5] org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/SgFSMTest.java:[1766,65] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.SgFSMTest.NettyTransportManagement
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[204,5] org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.TestAssociation is not abstract and does not override abstract method setExtraPeerHostAddresses(java.lang.String[]) in org.mobicents.protocols.api.Association
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[350,5] org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.NettyTransportManagement is not abstract and does not override abstract method getPoolStatistics() in org.mobicents.protocols.api.Management
+[ERROR] /C:/Users/Windows/Desktop/ethiopia-working-dir/jSS7/m3ua/impl/src/test/java/org/restcomm/protocols/ss7/m3ua/impl/M3UAManagementTest.java:[352,69] cannot find symbol
+[ERROR]   symbol:   class FastMap
+[ERROR]   location: class org.restcomm.protocols.ss7.m3ua.impl.M3UAManagementTest.NettyTransportManagement
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :m3ua-impl

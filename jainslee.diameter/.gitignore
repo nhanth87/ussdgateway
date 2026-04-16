@@ -1,0 +1,23 @@
+# Hidden directories
+.minimax/
+.min*/
+.*/**
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Build outputs
+target/
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1102 @@
+thg 4 10, 2026 6:20:41 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:41 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:41 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:41 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+thg 4 10, 2026 6:20:42 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:42 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:42 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:42 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:44 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:44 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:44 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:44 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:45 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:45 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:45 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:45 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:46 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:46 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:46 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:46 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+thg 4 10, 2026 6:20:52 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:52 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:52 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:52 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:54 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:54 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:54 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:54 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:20:58 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+log4j:WARN No appenders could be found for logger (org.restcomm.protocols.ss7.scheduler.Scheduler).
+log4j:WARN Please initialize the log4j system properly.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:25 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+java.lang.ArrayIndexOutOfBoundsException: Index 18 out of bounds for length 13
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:412)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:333)
+	at aQute.lib.osgi.Clazz.parseClassFileWithCollector(Clazz.java:323)
+	at aQute.lib.osgi.Clazz.parseClassFile(Clazz.java:313)
+	at aQute.lib.osgi.Analyzer.analyzeJar(Analyzer.java:1646)
+	at aQute.lib.osgi.Analyzer.analyzeBundleClasspath(Analyzer.java:1534)
+	at aQute.lib.osgi.Analyzer.analyze(Analyzer.java:115)
+	at aQute.lib.osgi.Builder.analyze(Builder.java:296)
+	at aQute.lib.osgi.Analyzer.calcManifest(Analyzer.java:292)
+	at aQute.lib.osgi.Builder.build(Builder.java:68)
+	at org.apache.felix.bundleplugin.BundlePlugin.buildOSGiBundle(BundlePlugin.java:375)
+	at org.apache.felix.bundleplugin.ManifestPlugin.execute(ManifestPlugin.java:60)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:224)
+	at org.apache.felix.bundleplugin.BundlePlugin.execute(BundlePlugin.java:215)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+thg 4 10, 2026 6:24:27 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:27 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:27 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:27 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:28 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:28 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:28 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:28 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:29 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Manifest-Version.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:29 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Created-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:29 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Built-By.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+thg 4 10, 2026 6:24:29 CH java.util.jar.Attributes read
+WARNING: Duplicate name in Manifest: Build-Jdk.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.

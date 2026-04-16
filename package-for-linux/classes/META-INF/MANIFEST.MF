@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.15.0
+Bnd-LastModified: 1776244868271
+Export-Package: org.restcomm.protocols.ss7.map.load,org.restcomm.protoco
+ ls.ss7.map.load.sms.mo;uses:="org.restcomm.protocols.ss7.map.api,org.ap
+ ache.log4j",org.restcomm.protocols.ss7.map.load.sms.mt;uses:="org.restc
+ omm.protocols.ss7.map.api,org.apache.log4j",org.restcomm.protocols.ss7.
+ map.load.ussd;uses:="org.restcomm.protocols.ss7.map.api,org.apache.log4
+ j",org.restcomm.protocols.ss7.map.loadService
+Import-Package: org.apache.log4j,org.restcomm.protocols.ss7.map.api
+Implementation-Vendor-Id: TeleStax, Inc.
+Bundle-License: http://www.gnu.org/licenses/agpl-3.0.html
+Bundle-Description: Restcomm :: Parent pom for 2.x releases
+Implementation-Title: org.restcomm.protocols.ss7.map:map-load
+Bundle-SymbolicName: org.restcomm.protocols.ss7.map.load
+Bundle-Version: 9.2.7
+Implementation-Version: 9.2.7
+Implementation-URL: http://www.restcomm.org
+Bundle-Name: Restcomm jSS7 :: MAP :: LOAD :: map-load
+Built-By: nhanth12
+Build-Jdk: 25.0.1
+
