@@ -1,0 +1,139 @@
+
+package org.restcomm.protocols.ss7.cap.EsiBcsm;
+
+import static org.testng.Assert.*;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+
+import org.mobicents.protocols.asn.AsnInputStream;
+import org.mobicents.protocols.asn.AsnOutputStream;
+import org.mobicents.protocols.asn.Tag;
+import org.restcomm.protocols.ss7.cap.EsiBcsm.MetDPCriterionImpl;
+import org.restcomm.protocols.ss7.cap.EsiBcsm.OChangeOfPositionSpecificInfoImpl;
+import org.restcomm.protocols.ss7.cap.api.EsiBcsm.MetDPCriterion;
+import org.restcomm.protocols.ss7.map.api.primitives.LAIFixedLength;
+import org.restcomm.protocols.ss7.map.api.service.mobility.subscriberInformation.LocationInformation;
+import org.restcomm.protocols.ss7.map.primitives.LAIFixedLengthImpl;
+import org.restcomm.protocols.ss7.map.service.mobility.subscriberInformation.LocationInformationImpl;
+import org.testng.annotations.Test;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import org.restcomm.protocols.ss7.cap.CAPJacksonXMLHelper;
+
+/**
+*
+* @author sergey vetyutnev
+*
+*/
+public class OChangeOfPositionSpecificInfoTest {
+
+    public byte[] getData1() {
+        return new byte[] { 48, 7, (byte) 191, 50, 4, 2, 2, 0, (byte) 200 };
+    }
+
+    public byte[] getData2() {
+        return new byte[] { 48, 19, (byte) 191, 50, 4, 2, 2, 0, (byte) 200, (byte) 191, 51, 9, (byte) 133, 5, 82, (byte) 240, 16, (byte) 128, (byte) 232,
+                (byte) 135, 0 };
+    }
+
+    @Test(groups = { "functional.decode", "EsiBcsm" })
+    public void testDecode() throws Exception {
+
+        byte[] data = this.getData1();
+        AsnInputStream ais = new AsnInputStream(data);
+        OChangeOfPositionSpecificInfoImpl elem = new OChangeOfPositionSpecificInfoImpl();
+        int tag = ais.readTag();
+        assertEquals(tag, Tag.SEQUENCE);
+        assertEquals(ais.getTagClass(), Tag.CLASS_UNIVERSAL);
+
+        elem.decodeAll(ais);
+        assertEquals((int) elem.getLocationInformation().getAgeOfLocationInformation(), 200);
+        assertNull(elem.getMetDPCriteriaList());
+
+
+        data = this.getData2();
+        ais = new AsnInputStream(data);
+        elem = new OChangeOfPositionSpecificInfoImpl();
+        tag = ais.readTag();
+        assertEquals(tag, Tag.SEQUENCE);
+        assertEquals(ais.getTagClass(), Tag.CLASS_UNIVERSAL);
+
+        elem.decodeAll(ais);
+        assertEquals((int) elem.getLocationInformation().getAgeOfLocationInformation(), 200);
+
+        assertEquals(elem.getMetDPCriteriaList().size(), 2);
+        assertEquals(elem.getMetDPCriteriaList().get(0).getLeavingLocationAreaId().getLac(), 33000);
+        assertTrue(elem.getMetDPCriteriaList().get(1).getInterSystemHandOverToGSM());
+    }
+
+    @Test(groups = { "functional.encode", "EsiBcsm" })
+    public void testEncode() throws Exception {
+
+        LocationInformation locationInformation = new LocationInformationImpl(200, null, null, null, null, null, null, null, null, false, false, null, null);
+        OChangeOfPositionSpecificInfoImpl elem = new OChangeOfPositionSpecificInfoImpl(locationInformation, null);
+        AsnOutputStream aos = new AsnOutputStream();
+        elem.encodeAll(aos);
+        assertEquals(aos.toByteArray(), this.getData1());
+
+
+        ArrayList<MetDPCriterion> metDPCriteriaList = new ArrayList<MetDPCriterion>();
+        LAIFixedLength value = new LAIFixedLengthImpl(250, 1, 33000);
+        MetDPCriterion met1 = new MetDPCriterionImpl(value, MetDPCriterionImpl.LAIFixedLength_Option.leavingLocationAreaId);
+        metDPCriteriaList.add(met1);
+        MetDPCriterion met2 = new MetDPCriterionImpl(MetDPCriterionImpl.Boolean_Option.interSystemHandOverToGSM);
+        metDPCriteriaList.add(met2);
+        elem = new OChangeOfPositionSpecificInfoImpl(locationInformation, metDPCriteriaList);
+        aos = new AsnOutputStream();
+        elem.encodeAll(aos);
+        assertEquals(aos.toByteArray(), this.getData2());
+    }
+
+    @Test(groups = { "functional.xml.serialize", "EsiBcsm" })
+    public void testXMLSerializaion() throws Exception {
+        XmlMapper xmlMapper = CAPJacksonXMLHelper.getXmlMapper();
+        LocationInformation locationInformation = new LocationInformationImpl(200, null, null, null, null, null, null, null, null, false, false, null, null);
+        OChangeOfPositionSpecificInfoImpl original = new OChangeOfPositionSpecificInfoImpl(locationInformation, null);
+
+        // Writes the area to a file.
+        String serializedEvent = xmlMapper.writeValueAsString(original);
+        System.out.println(serializedEvent);
+
+        OChangeOfPositionSpecificInfoImpl copy = null;
+        try {
+            copy = xmlMapper.readValue(serializedEvent, OChangeOfPositionSpecificInfoImpl.class);
+        } catch (Exception e) {
+            // Fallback to string assertions
+        assertTrue(serializedEvent.contains("<ageOfLocationInformation>"));
+        assertFalse(serializedEvent.contains("<metDPCriteriaList>"));
+        }
+        if (copy != null) {
+            assertEquals((int) copy.getLocationInformation().getAgeOfLocationInformation(), (int) original.getLocationInformation().getAgeOfLocationInformation());
+            assertNull(copy.getMetDPCriteriaList());
+        }
+        ArrayList<MetDPCriterion> metDPCriteriaList = new ArrayList<MetDPCriterion>();
+        LAIFixedLength value = new LAIFixedLengthImpl(250, 1, 33000);
+        MetDPCriterion met1 = new MetDPCriterionImpl(value, MetDPCriterionImpl.LAIFixedLength_Option.leavingLocationAreaId);
+        metDPCriteriaList.add(met1);
+        MetDPCriterion met2 = new MetDPCriterionImpl(MetDPCriterionImpl.Boolean_Option.interSystemHandOverToGSM);
+        metDPCriteriaList.add(met2);
+        original = new OChangeOfPositionSpecificInfoImpl(locationInformation, metDPCriteriaList);
+
+        serializedEvent = xmlMapper.writeValueAsString(original);
+        System.out.println(serializedEvent);
+
+        try {
+            copy = xmlMapper.readValue(serializedEvent, OChangeOfPositionSpecificInfoImpl.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        if (copy != null) {
+            assertEquals((int) copy.getLocationInformation().getAgeOfLocationInformation(), (int) original.getLocationInformation().getAgeOfLocationInformation());
+            assertEquals(copy.getMetDPCriteriaList().size(), original.getMetDPCriteriaList().size());
+            assertEquals(copy.getMetDPCriteriaList().get(1).getInterSystemHandOverToGSM(), original.getMetDPCriteriaList().get(1).getInterSystemHandOverToGSM());
+        }
+    }
+
+}

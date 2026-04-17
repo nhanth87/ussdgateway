@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LinkedHashMap>
+  <timeBetweenHeartbeat>10000</timeBetweenHeartbeat>
+  <statisticsEnabled>false</statisticsEnabled>
+  <statisticsTaskDelay>5000</statisticsTaskDelay>
+  <statisticsTaskPeriod>5000</statisticsTaskPeriod>
+  <routingKeyManagementEnabled>false</routingKeyManagementEnabled>
+  <useLsbForLinksetSelection>false</useLsbForLinksetSelection>
+  <aspFactories>
+    <name>ASP1</name>
+    <livenessTimer/>
+    <heartbeatTimer/>
+  </aspFactories>
+  <appServers>
+    <name>AS1</name>
+    <rc/>
+    <trafficMode/>
+  </appServers>
+</LinkedHashMap>

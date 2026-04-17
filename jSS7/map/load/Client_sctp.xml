@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sctp>
+  <connectdelay>1000</connectdelay>
+  <congControl_DelayThreshold_1>2.5</congControl_DelayThreshold_1>
+  <congControl_DelayThreshold_2>8.0</congControl_DelayThreshold_2>
+  <congControl_DelayThreshold_3>14.0</congControl_DelayThreshold_3>
+  <congControl_BackToNormalDelayThreshold_1>1.5</congControl_BackToNormalDelayThreshold_1>
+  <congControl_BackToNormalDelayThreshold_2>5.5</congControl_BackToNormalDelayThreshold_2>
+  <congControl_BackToNormalDelayThreshold_3>10.0</congControl_BackToNormalDelayThreshold_3>
+  <servers/>
+  <association>
+    <clientAssociation hostAddress="127.0.0.1" hostPort="8015" peerAddress="127.0.0.1" peerPort="8026" name="clientAssociation" ipChannelType="SCTP" type="CLIENT">
+      <connected>false</connected>
+      <congestionLevel>0</congestionLevel>
+      <byteBufAllocator/>
+      <associationType>CLIENT</associationType>
+    </clientAssociation>
+  </association>
+</sctp>

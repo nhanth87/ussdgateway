@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sctp>
+  <connectdelay>10000</connectdelay>
+  <congControl_DelayThreshold_1>2.5</congControl_DelayThreshold_1>
+  <congControl_DelayThreshold_2>8.0</congControl_DelayThreshold_2>
+  <congControl_DelayThreshold_3>14.0</congControl_DelayThreshold_3>
+  <congControl_BackToNormalDelayThreshold_1>1.5</congControl_BackToNormalDelayThreshold_1>
+  <congControl_BackToNormalDelayThreshold_2>5.5</congControl_BackToNormalDelayThreshold_2>
+  <congControl_BackToNormalDelayThreshold_3>10.0</congControl_BackToNormalDelayThreshold_3>
+  <servers>
+    <server name="testserver0" hostAddress="127.0.0.1" hostport="8011" started="true" ipChannelType="SCTP" acceptAnonymousConnections="false" maxConcurrentConnectionsCount="0">
+      <associations>
+        <associations>serverAssociation0</associations>
+      </associations>
+    </server>
+    <server name="testserver1" hostAddress="127.0.0.1" hostport="8016" started="true" ipChannelType="SCTP" acceptAnonymousConnections="false" maxConcurrentConnectionsCount="0">
+      <associations>
+        <associations>serverAssociation1</associations>
+      </associations>
+    </server>
+    <server name="testserver2" hostAddress="127.0.0.1" hostport="8021" started="true" ipChannelType="SCTP" acceptAnonymousConnections="false" maxConcurrentConnectionsCount="0">
+      <associations>
+        <associations>serverAssociation2</associations>
+      </associations>
+    </server>
+    <server name="testserver3" hostAddress="127.0.0.1" hostport="8026" started="true" ipChannelType="SCTP" acceptAnonymousConnections="false" maxConcurrentConnectionsCount="0">
+      <associations>
+        <associations>serverAssociation3</associations>
+      </associations>
+    </server>
+  </servers>
+  <association>
+    <serverAssociation0 hostPort="0" peerAddress="127.0.0.1" peerPort="8012" serverName="testserver0" name="serverAssociation0" ipChannelType="SCTP" type="SERVER">
+      <connected>false</connected>
+      <congestionLevel>0</congestionLevel>
+      <byteBufAllocator/>
+      <associationType>SERVER</associationType>
+    </serverAssociation0>
+    <serverAssociation1 hostPort="0" peerAddress="127.0.0.1" peerPort="8013" serverName="testserver1" name="serverAssociation1" ipChannelType="SCTP" type="SERVER">
+      <connected>false</connected>
+      <congestionLevel>0</congestionLevel>
+      <byteBufAllocator/>
+      <associationType>SERVER</associationType>
+    </serverAssociation1>
+    <serverAssociation2 hostPort="0" peerAddress="127.0.0.1" peerPort="8014" serverName="testserver2" name="serverAssociation2" ipChannelType="SCTP" type="SERVER">
+      <connected>false</connected>
+      <congestionLevel>0</congestionLevel>
+      <byteBufAllocator/>
+      <associationType>SERVER</associationType>
+    </serverAssociation2>
+    <serverAssociation3 hostPort="0" peerAddress="127.0.0.1" peerPort="8015" serverName="testserver3" name="serverAssociation3" ipChannelType="SCTP" type="SERVER">
+      <connected>false</connected>
+      <congestionLevel>0</congestionLevel>
+      <byteBufAllocator/>
+      <associationType>SERVER</associationType>
+    </serverAssociation3>
+  </association>
+</sctp>

@@ -71,6 +71,7 @@ import org.restcomm.protocols.ss7.tcap.asn.ApplicationContextName;
 import org.restcomm.protocols.ss7.tcap.asn.ReturnResultLastImpl;
 import org.restcomm.protocols.ss7.tcap.asn.comp.Problem;
 import org.restcomm.protocols.ss7.tcap.asn.comp.ReturnResultLast;
+import org.restcomm.protocols.ss7.map.load.Ss7ThreadPoolTuner;
 
 /**
  * @modified <a href="mailto:fernando.mendioroz@gmail.com"> Fernando Mendioroz </a>
@@ -78,6 +79,7 @@ import org.restcomm.protocols.ss7.tcap.asn.comp.ReturnResultLast;
 public class Server extends TestHarnessSmsMo {
 
     private static Logger logger = Logger.getLogger(Server.class);
+    private Ss7ThreadPoolTuner tuner;
 
     // MAP
     private MAPStackImpl mapStack;
@@ -133,6 +135,7 @@ public class Server extends TestHarnessSmsMo {
         this.sctpManagement.setOptionSoRcvbuf(8 * 1024 * 1024);
         this.sctpManagement.setOptionSctpInitMaxstreams_MaxInStreams(256);
         this.sctpManagement.setOptionSctpInitMaxstreams_MaxOutStreams(256);
+        this.sctpManagement.setOptionSctpNodelay(false);
         this.sctpManagement.start();
         this.sctpManagement.setConnectDelay(10000);
         this.sctpManagement.removeAllResources();
@@ -155,7 +158,11 @@ public class Server extends TestHarnessSmsMo {
     private void initM3UA() throws Exception {
         this.serverM3UAMgmt = new M3UAManagementImpl("Server", null, new Ss7ExtInterfaceImpl());
         this.serverM3UAMgmt.setTransportManagement(this.sctpManagement);
-        this.serverM3UAMgmt.setDeliveryMessageThreadCount(DELIVERY_TRANSFER_MESSAGE_THREAD_COUNT);
+        if (this.tuner != null) {
+            this.tuner.applyM3UA(this.serverM3UAMgmt);
+        } else {
+            this.serverM3UAMgmt.setDeliveryMessageThreadCount(DELIVERY_TRANSFER_MESSAGE_THREAD_COUNT);
+        }
         this.serverM3UAMgmt.start();
         this.serverM3UAMgmt.removeAllResources();
 
@@ -186,7 +193,9 @@ public class Server extends TestHarnessSmsMo {
         ss7ExtInterface.setSs7ExtSccpInterface(sccpExtModule);
         this.sccpStack = new SccpStackImpl("MapLoadServerSccpStack", ss7ExtInterface);
         this.sccpStack.setMtp3UserPart(1, this.serverM3UAMgmt);
-
+        if (this.tuner != null) {
+            this.tuner.applySCCP(this.sccpStack);
+        }
         this.sccpStack.start();
         this.sccpStack.removeAllResources();
 
@@ -222,6 +231,9 @@ public class Server extends TestHarnessSmsMo {
 
     private void initTCAP() throws Exception {
         this.tcapStack = new TCAPStackImpl("TestServer", this.sccpStack.getSccpProvider(), SSN);
+        if (this.tuner != null) {
+            this.tuner.applyTCAP(this.tcapStack);
+        }
         this.tcapStack.start();
         this.tcapStack.setDialogIdleTimeout(300000);
         this.tcapStack.setInvokeTimeout(120000);
@@ -475,6 +487,8 @@ public class Server extends TestHarnessSmsMo {
         }
 
         final Server server = new Server();
+        server.tuner = new Ss7ThreadPoolTuner(Ss7ThreadPoolTuner.ProcessType.SERVER);
+        server.tuner.printAllocation();
         try {
             server.initializeStack(ipChannelType);
         } catch (Exception e) {

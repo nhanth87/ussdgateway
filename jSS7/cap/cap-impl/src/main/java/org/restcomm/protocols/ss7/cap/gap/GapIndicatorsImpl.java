@@ -1,0 +1,154 @@
+package org.restcomm.protocols.ss7.cap.gap;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+import java.io.IOException;
+
+
+import org.mobicents.protocols.asn.AsnException;
+import org.mobicents.protocols.asn.AsnInputStream;
+import org.mobicents.protocols.asn.AsnOutputStream;
+import org.mobicents.protocols.asn.Tag;
+import org.restcomm.protocols.ss7.cap.api.CAPException;
+import org.restcomm.protocols.ss7.cap.api.CAPParsingComponentException;
+import org.restcomm.protocols.ss7.cap.api.CAPParsingComponentExceptionReason;
+import org.restcomm.protocols.ss7.cap.api.gap.GapIndicators;
+import org.restcomm.protocols.ss7.cap.primitives.SequenceBase;
+
+
+/**
+ *
+ * @author <a href="mailto:bartosz.krok@pro-ids.com"> Bartosz Krok (ProIDS sp. z o.o.)</a>
+ */
+@JacksonXmlRootElement(localName = "gapIndicators")
+public class GapIndicatorsImpl extends SequenceBase implements GapIndicators {
+
+    private static final String DURATION = "duration";
+    private static final String GAP_INTERVAL = "gapInterval";
+
+    public static final int _ID_Duration = 0;
+    public static final int _ID_Gap_Interval = 1;
+
+    private static int DEFAULT_VALUE = 0;
+
+    private int duration;
+    private int gapInterval;
+
+    public GapIndicatorsImpl() {
+        super("GapIndicators");
+    }
+
+    public GapIndicatorsImpl(int duration, int gapInterval) {
+        super("GapIndicators");
+        this.duration = duration;
+        this.gapInterval = gapInterval;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public int getGapInterval() {
+        return gapInterval;
+    }
+
+    protected void _decode(AsnInputStream asnInputStream, int length) throws CAPParsingComponentException, IOException, AsnException {
+
+        this.duration = 0;
+        this.gapInterval = 0;
+
+        boolean foundDuration = false;
+        boolean foundGapInterval = false;
+
+        AsnInputStream ais = asnInputStream.readSequenceStreamData(length);
+
+        while (true) {
+            if (ais.available() == 0) {
+                break;
+            }
+
+            int tag = ais.readTag();
+
+            if (ais.getTagClass() == Tag.CLASS_CONTEXT_SPECIFIC) {
+
+                switch (tag) {
+                    case _ID_Duration: {
+                        this.duration = (int) ais.readInteger();
+                        if (this.duration < -2 || this.duration > 86400) {
+                            throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName + "-duration: possible value -2..86400, received="
+                                    + duration, CAPParsingComponentExceptionReason.MistypedParameter);
+                        }
+                        foundDuration = true;
+                        break;
+                    }
+                    case _ID_Gap_Interval: {
+                        this.gapInterval = (int) ais.readInteger();
+                        if (this.gapInterval < -1 || this.gapInterval > 60000) {
+                            throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName + "-gapInterval: possible value -1..60000, received="
+                                    + gapInterval, CAPParsingComponentExceptionReason.MistypedParameter);
+                        }
+                        foundGapInterval = true;
+                        break;
+                    }
+                    default: {
+                        ais.advanceElement();
+                        break;
+                    }
+                }
+            } else {
+                ais.advanceElement();
+            }
+        }
+
+        if (!foundDuration) {
+            throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName
+                    + ": duration parameter is not found", CAPParsingComponentExceptionReason.MistypedParameter);
+        }
+        if (!foundGapInterval) {
+            throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName
+                    + ": gapInterval parameter is not found", CAPParsingComponentExceptionReason.MistypedParameter);
+        }
+    }
+
+    public void encodeData(AsnOutputStream asnOutputStream) throws CAPException {
+
+        try {
+            if (this.duration < -2 || this.duration > 86400) {
+                throw new CAPException("Error when encoding " + _PrimitiveName + ": duration must be -2..86400, supplied="
+                        + duration);
+            }
+            asnOutputStream.writeInteger(Tag.CLASS_CONTEXT_SPECIFIC, _ID_Duration, duration);
+            if (this.gapInterval < -1 || this.gapInterval > 60000) {
+                throw new CAPException("Error when encoding " + _PrimitiveName + ": gapInterval must be -1..60000, supplied="
+                        + gapInterval);
+            }
+            asnOutputStream.writeInteger(Tag.CLASS_CONTEXT_SPECIFIC, _ID_Gap_Interval, gapInterval);
+        } catch (IOException e) {
+            throw new CAPException("IOException when encoding " + _PrimitiveName + ": " + e.getMessage(), e);
+        } catch (AsnException ex) {
+            throw new CAPException("AsnException when encoding " + _PrimitiveName + ": " + ex.getMessage(), ex);
+        }
+    }
+
+
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(_PrimitiveName);
+        sb.append(" [");
+
+        sb.append("duration=");
+        sb.append(duration);
+        sb.append(", gapInterval=");
+        sb.append(gapInterval);
+
+        sb.append("]");
+
+        return sb.toString();
+    }
+
+}
+

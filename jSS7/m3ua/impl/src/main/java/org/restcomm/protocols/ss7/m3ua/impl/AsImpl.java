@@ -1,6 +1,7 @@
 
 package org.restcomm.protocols.ss7.m3ua.impl;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
@@ -58,11 +59,13 @@ public class AsImpl implements As {
 
     // List of all the ASP's for this AS
     @JsonProperty("appServerProcs")
-    protected final CopyOnWriteArrayList<Asp> appServerProcs = new CopyOnWriteArrayList<Asp>();
+    protected final CopyOnWriteArrayList<AspImpl> appServerProcs = new CopyOnWriteArrayList<AspImpl>();
 
     // List of As state listeners - transient, don't serialize
+    @JsonIgnore
     private final Set<AsStateListener> asStateListeners = ConcurrentHashMap.newKeySet();
 
+    @JsonIgnore
     private AspTrafficListener aspTrafficListener;
 
     @JsonProperty("name")
@@ -75,22 +78,28 @@ public class AsImpl implements As {
     @JsonProperty("defaultTrafficModeType")
     protected TrafficModeType defaultTrafficModeType;
 
+    @JsonIgnore
     protected ConcurrentLinkedQueue<PayloadData> penQueue = new ConcurrentLinkedQueue<PayloadData>();
 
     /**
      * Peer FSM maintains state such that it receives the NTFY from other side
      */
+    @JsonIgnore
     private FSM peerFSM;
 
     /**
      * Local FSM maintains state such that it sends the NTFY to other side
      */
+    @JsonIgnore
     private FSM localFSM;
 
+    @JsonIgnore
     protected ParameterFactory parameterFactory = new ParameterFactoryImpl();
 
+    @JsonIgnore
     protected MessageFactory messageFactory = new MessageFactoryImpl();
 
+    @JsonIgnore
     protected M3UAManagementImpl m3UAManagementImpl = null;
 
     private Functionality functionality = null;
@@ -103,6 +112,7 @@ public class AsImpl implements As {
     private int aspSlsMask = 0x07;
     private int aspSlsShiftPlaces = 0x00;
 
+    @JsonIgnore
     protected State state = AsState.DOWN;
 
     public AsImpl() {
@@ -413,6 +423,7 @@ public class AsImpl implements As {
         return m3UAManagementImpl;
     }
 
+    @JsonIgnore
     protected MessageFactory getMessageFactory() {
         return messageFactory;
     }

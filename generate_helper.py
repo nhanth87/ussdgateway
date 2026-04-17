@@ -1,0 +1,83 @@
+import os
+import sys
+
+module_path = sys.argv[1]
+helper_package = sys.argv[2]
+helper_name = sys.argv[3]
+
+java_code = f'''package {helper_package};
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.AbstractTypeResolver;
+import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.Module.SetupContext;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import java.lang.reflect.Modifier;
+
+public class {helper_name} {{
+    private static final XmlMapper XML_MAPPER = new XmlMapper();
+    static {{
+        XML_MAPPER.enable(SerializationFeature.INDENT_OUTPUT);
+        XML_MAPPER.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        XML_MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        SimpleModule module = new SimpleModule("{helper_name.lower().replace('helper', '')}-module") {{
+            @Override
+            public void setupModule(SetupContext context) {{
+                super.setupModule(context);
+                context.addAbstractTypeResolver(new AutoImplAbstractTypeResolver());
+            }}
+        }};
+        XML_MAPPER.registerModule(module);
+    }}
+
+    public static XmlMapper getXmlMapper() {{
+        return XML_MAPPER;
+    }}
+
+    private static class AutoImplAbstractTypeResolver extends AbstractTypeResolver {{
+        @Override
+        public JavaType findTypeMapping(DeserializationConfig config, JavaType type) {{
+            Class<?> raw = type.getRawClass();
+            if (!raw.isInterface() && !Modifier.isAbstract(raw.getModifiers())) {{
+                return null;
+            }}
+            Package pkgObj = raw.getPackage();
+            if (pkgObj == null) {{
+                return null;
+            }}
+            String simple = raw.getSimpleName();
+            String pkg = pkgObj.getName();
+
+            String[] candidates = new String[] {{
+                pkg + "." + simple + "Impl",
+                pkg.replace(".api.", ".") + "." + simple + "Impl",
+                pkg + ".impl." + simple + "Impl",
+            }};
+
+            for (String candidate : candidates) {{
+                if (candidate.equals(raw.getName())) continue;
+                try {{
+                    Class<?> impl = Class.forName(candidate);
+                    if (raw.isAssignableFrom(impl)) {{
+                        return config.constructType(impl);
+                    }}
+                }} catch (ClassNotFoundException e) {{
+                    // ignore
+                }}
+            }}
+            return null;
+        }}
+    }}
+}}
+'''
+
+helper_path = os.path.join(module_path, 'src/main/java', helper_package.replace('.', '/'), helper_name + '.java')
+os.makedirs(os.path.dirname(helper_path), exist_ok=True)
+with open(helper_path, 'w', encoding='utf-8') as f:
+    f.write(java_code)
+
+print('Generated', helper_path)

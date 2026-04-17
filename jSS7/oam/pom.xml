@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.restcomm.protocols.ss7</groupId>
 		<artifactId>ss7-parent</artifactId>
-		<version>9.2.8</version>
+		<version>9.2.9</version>
 	</parent>
 
 	<groupId>org.restcomm.protocols.ss7.oam</groupId>

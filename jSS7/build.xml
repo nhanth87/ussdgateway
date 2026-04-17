@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jSS7-WildFly24-Deploy" default="deploy" basedir=".">
+
+    <property name="wildfly.home" value="${env.WILDFLY_HOME}"/>
+    <property name="wildfly.home.check" value="${wildfly.home}/standalone/configuration"/>
+    
+    <property name="jss7.version" value="9.0.0-318"/>
+    <property name="sctp.version" value="2.0.2-17"/>
+    
+    <!-- Module directories -->
+    <property name="modules.target" value="${basedir}/service/wildfly/modules/target/module"/>
+    <property name="extension.target" value="${basedir}/service/wildfly/extension/target/module"/>
+    <property name="commons.target" value="${basedir}/service/wildfly/restcomm-ss7-wildfly-commons/target/module"/>
+    
+    <property name="wildfly.modules" value="${wildfly.home}/modules"/>
+
+    <target name="check-wildfly" unless="wildfly.home">
+        <fail message="WILDFLY_HOME environment variable is not set. Please set it to your WildFly 24 installation directory."/>
+    </target>
+
+    <target name="check-wildfly-dir" depends="check-wildfly">
+        <available file="${wildfly.home.check}" type="dir" property="wildfly.exists"/>
+        <fail unless="wildfly.exists" message="WildFly home directory does not exist or is invalid: ${wildfly.home}"/>
+        <echo message="WildFly home: ${wildfly.home}"/>
+    </target>
+
+    <target name="clean-deploy" depends="check-wildfly-dir" description="Clean previous jSS7 deployment">
+        <echo message="Cleaning previous jSS7 deployment..."/>
+        <delete includeemptydirs="true" failonerror="false">
+            <fileset dir="${wildfly.modules}">
+                <include name="org/restcomm/ss7/**/*"/>
+                <include name="org/mobicents/**/*"/>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="deploy-modules" depends="check-wildfly-dir" description="Deploy jSS7 modules to WildFly">
+        <echo message="Deploying jSS7 modules to WildFly..."/>
+        
+        <!-- Main SS7 modules -->
+        <copy todir="${wildfly.modules}/org/restcomm/ss7/main" overwrite="true">
+            <fileset dir="${modules.target}/main">
+                <include name="**/*.jar"/>
+            </fileset>
+        </copy>
+        
+        <!-- Copy module.xml for main modules -->
+        <copy todir="${wildfly.modules}/org/restcomm/ss7/main" overwrite="true">
+            <fileset dir="${modules.target}/main">
+                <include name="module.xml"/>
+            </fileset>
+            <filterset>
+                <filter token="project.version" value="${jss7.version}"/>
+            </filterset>
+        </copy>
+        
+        <!-- Extension module -->
+        <mkdir dir="${wildfly.modules}/org/restcomm/ss7/extension/main"/>
+        <copy todir="${wildfly.modules}/org/restcomm/ss7/extension/main" overwrite="true">
+            <fileset dir="${extension.target}/main">
+                <include name="**/*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${wildfly.modules}/org/restcomm/ss7/extension/main" overwrite="true">
+            <fileset dir="${extension.target}/main">
+                <include name="module.xml"/>
+            </fileset>
+        </copy>
+        
+        <!-- Commons module -->
+        <mkdir dir="${wildfly.modules}/org/restcomm/ss7/commons/main"/>
+        <copy todir="${wildfly.modules}/org/restcomm/ss7/commons/main" overwrite="true">
+            <fileset dir="${commons.target}/main">
+                <include name="**/*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${wildfly.modules}/org/restcomm/ss7/commons/main" overwrite="true">
+            <fileset dir="${commons.target}/main">
+                <include name="module.xml"/>
+            </fileset>
+        </copy>
+        
+        <echo message="jSS7 modules deployed successfully!"/>
+    </target>
+
+    <target name="undeploy" depends="check-wildfly-dir" description="Undeploy jSS7 from WildFly">
+        <echo message="Undeploying jSS7 from WildFly..."/>
+        <delete includeemptydirs="true" failonerror="false">
+            <fileset dir="${wildfly.modules}">
+                <include name="org/restcomm/ss7/**/*"/>
+            </fileset>
+        </delete>
+        <echo message="jSS7 undeployed successfully!"/>
+    </target>
+
+    <target name="list-modules" depends="check-wildfly-dir" description="List deployed jSS7 modules">
+        <echo message="Listing jSS7 modules in WildFly..."/>
+        <dirset id="jss7.modules" dir="${wildfly.modules}/org/restcomm" includes="**/*">
+            <type type="dir"/>
+        </dirset>
+        <pathconvert refid="jss7.modules" property="modules.list" pathsep="${line.separator}">
+            <map from="${wildfly.modules}/org/restcomm/" to=""/>
+        </pathconvert>
+        <echo message="Deployed modules:${line.separator}${modules.list}"/>
+    </target>
+
+    <target name="deploy" depends="clean-deploy,deploy-modules" description="Full deploy jSS7 to WildFly 24">
+        <echo message="jSS7 ${jss7.version} deployed to WildFly successfully!"/>
+        <echo message="Next steps:"/>
+        <echo message="1. Edit ${wildfly.home}/standalone/configuration/standalone.xml"/>
+        <echo message="2. Add the SS7 extension and subsystem"/>
+        <echo message="3. Start WildFly: ${wildfly.home}/bin/standalone.bat"/>
+    </target>
+
+    <target name="help" description="Show help">
+        <echo message="jSS7 WildFly 24 Deployment Script"/>
+        <echo message="================================="/>
+        <echo message=""/>
+        <echo message="Prerequisites:"/>
+        <echo message="  - Set WILDFLY_HOME environment variable to WildFly 24 installation"/>
+        <echo message="  - Build jSS7 with: mvn clean install -DskipTests"/>
+        <echo message=""/>
+        <echo message="Available targets:"/>
+        <echo message="  ant deploy        - Full deploy (clean + deploy modules)"/>
+        <echo message="  ant deploy-modules- Deploy only (no clean)"/>
+        <echo message="  ant undeploy      - Remove jSS7 from WildFly"/>
+        <echo message="  ant clean-deploy  - Clean previous deployment"/>
+        <echo message="  ant list-modules  - List deployed modules"/>
+        <echo message="  ant help          - Show this help"/>
+    </target>
+
+</project>

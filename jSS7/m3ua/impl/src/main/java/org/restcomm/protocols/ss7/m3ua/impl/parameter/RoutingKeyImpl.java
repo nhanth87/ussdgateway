@@ -1,0 +1,253 @@
+package org.restcomm.protocols.ss7.m3ua.impl.parameter;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+import org.restcomm.protocols.ss7.m3ua.parameter.DestinationPointCode;
+import org.restcomm.protocols.ss7.m3ua.parameter.LocalRKIdentifier;
+import org.restcomm.protocols.ss7.m3ua.parameter.NetworkAppearance;
+import org.restcomm.protocols.ss7.m3ua.parameter.OPCList;
+import org.restcomm.protocols.ss7.m3ua.parameter.Parameter;
+import org.restcomm.protocols.ss7.m3ua.parameter.RoutingContext;
+import org.restcomm.protocols.ss7.m3ua.parameter.RoutingKey;
+import org.restcomm.protocols.ss7.m3ua.parameter.ServiceIndicators;
+import org.restcomm.protocols.ss7.m3ua.parameter.TrafficModeType;
+
+/**
+ *
+ * @author amit bhayani
+ *
+ */
+@JacksonXmlRootElement(localName = "routingKey")
+public class RoutingKeyImpl extends ParameterImpl implements RoutingKey {
+
+    private static final String LOCAL_RK_ID = "localRkId";
+    private static final String ROUTING_CONTEXT = "rc";
+    private static final String TRAFFIC_MODE = "trafficMode";
+    private static final String NETWORK_APPEARANCE = "networkAppearanceearance";
+    private static final String DPCS = "dpcs";
+    private static final String DPC_ARRAY_SIZE = "dpcsSize";
+    private static final String SIS = "sis";
+    private static final String SI_ARRAY_SIZE = "sisSize";
+    private static final String OPC_LIST = "opcList";
+    private static final String OPC_ARRAY_SIZE = "opcSize";
+
+    @JsonProperty("localRkId")
+    private LocalRKIdentifier localRkId;
+    @JsonProperty("rc")
+    private RoutingContext rc;
+    @JsonProperty("trafficModeType")
+    private TrafficModeType trafficModeType;
+    @JsonProperty("networkAppearance")
+    private NetworkAppearance networkAppearance;
+    @JsonProperty("dpc")
+    private DestinationPointCode[] dpc;
+    @JsonProperty("serviceIndicators")
+    private ServiceIndicators[] serviceIndicators;
+    @JsonProperty("opcList")
+    private OPCList[] opcList;
+
+    private ByteBuf buf = Unpooled.buffer(256);
+
+    private byte[] value;
+
+    public RoutingKeyImpl() {
+        this.tag = Parameter.Routing_Key;
+    }
+
+    protected RoutingKeyImpl(byte[] value) {
+
+        this.tag = Parameter.Routing_Key;
+        this.value = value;
+
+        this.decode(value);
+
+        this.value = value;
+    }
+
+    protected RoutingKeyImpl(LocalRKIdentifier localRkId, RoutingContext rc, TrafficModeType trafficModeType, NetworkAppearance networkAppearance,
+            DestinationPointCode[] dpc, ServiceIndicators[] serviceIndicators, OPCList[] opcList) {
+        this.tag = Parameter.Routing_Key;
+        this.localRkId = localRkId;
+        this.rc = rc;
+        this.trafficModeType = trafficModeType;
+        this.networkAppearance = networkAppearance;
+        this.dpc = dpc;
+        this.serviceIndicators = serviceIndicators;
+        this.opcList = opcList;
+
+        this.encode();
+    }
+
+    private void decode(byte[] data) {
+        int pos = 0;
+        List<DestinationPointCode> dpcList = new ArrayList<DestinationPointCode>();
+        List<ServiceIndicators> serIndList = new ArrayList<ServiceIndicators>();
+        List<OPCList> opcListList = new ArrayList<OPCList>();
+
+        while (pos < data.length) {
+            short tag = (short) ((data[pos] & 0xff) << 8 | (data[pos + 1] & 0xff));
+            short len = (short) ((data[pos + 2] & 0xff) << 8 | (data[pos + 3] & 0xff));
+
+            byte[] value = new byte[len - 4];
+
+            System.arraycopy(data, pos + 4, value, 0, value.length);
+            pos += len;
+            // parameters.put(tag, factory.createParameter(tag, value));
+            switch (tag) {
+                case ParameterImpl.Local_Routing_Key_Identifier:
+                    this.localRkId = new LocalRKIdentifierImpl(value);
+                    break;
+
+                case ParameterImpl.Routing_Context:
+                    this.rc = new RoutingContextImpl(value);
+                    break;
+
+                case ParameterImpl.Traffic_Mode_Type:
+                    this.trafficModeType = new TrafficModeTypeImpl(value);
+                    break;
+
+                case ParameterImpl.Network_Appearance:
+                    this.networkAppearance = new NetworkAppearanceImpl(value);
+                    break;
+
+                case ParameterImpl.Destination_Point_Code:
+                    dpcList.add(new DestinationPointCodeImpl(value));
+                    break;
+                case ParameterImpl.Service_Indicators:
+                    serIndList.add(new ServiceIndicatorsImpl(value));
+                    break;
+                case ParameterImpl.Originating_Point_Code_List:
+                    opcListList.add(new OPCListImpl(value));
+                    break;
+            }
+
+            // The Parameter Length does not include any padding octets. We have
+            // to consider padding here
+            pos += (pos % 4);
+        }// end of while
+
+        this.dpc = new DestinationPointCode[dpcList.size()];
+        this.dpc = dpcList.toArray(this.dpc);
+
+        if (serIndList.size() > 0) {
+            this.serviceIndicators = new ServiceIndicators[serIndList.size()];
+            this.serviceIndicators = serIndList.toArray(this.serviceIndicators);
+        }
+
+        if (opcListList.size() > 0) {
+            this.opcList = new OPCList[opcListList.size()];
+            this.opcList = opcListList.toArray(this.opcList);
+        }
+    }
+
+    private void encode() {
+        if (this.localRkId != null) {
+            ((LocalRKIdentifierImpl) this.localRkId).write(buf);
+        }
+
+        if (this.rc != null) {
+            ((RoutingContextImpl) rc).write(buf);
+        }
+
+        if (this.trafficModeType != null) {
+            ((TrafficModeTypeImpl) trafficModeType).write(buf);
+        }
+
+        if (this.networkAppearance != null) {
+            ((NetworkAppearanceImpl) this.networkAppearance).write(buf);
+        }
+
+        for (int i = 0; i < this.dpc.length; i++) {
+            ((DestinationPointCodeImpl) this.dpc[i]).write(buf);
+
+            if (this.serviceIndicators != null) {
+                ((ServiceIndicatorsImpl) this.serviceIndicators[i]).write(buf);
+            }
+
+            if (this.opcList != null) {
+                ((OPCListImpl) this.opcList[i]).write(buf);
+            }
+        }
+
+        int length = buf.readableBytes();
+        value = new byte[length];
+        buf.getBytes(buf.readerIndex(), value);
+    }
+
+    @Override
+    protected byte[] getValue() {
+        return this.value;
+    }
+
+    public DestinationPointCode[] getDestinationPointCodes() {
+        return this.dpc;
+    }
+
+    public LocalRKIdentifier getLocalRKIdentifier() {
+        return this.localRkId;
+    }
+
+    public NetworkAppearance getNetworkAppearance() {
+        return this.networkAppearance;
+    }
+
+    public OPCList[] getOPCLists() {
+        return this.opcList;
+    }
+
+    public RoutingContext getRoutingContext() {
+        return this.rc;
+    }
+
+    public ServiceIndicators[] getServiceIndicators() {
+        return this.serviceIndicators;
+    }
+
+    public TrafficModeType getTrafficModeType() {
+        return this.trafficModeType;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder tb = new StringBuilder();
+        tb.append("RoutingKey(");
+        if (localRkId != null) {
+            tb.append(localRkId.toString());
+        }
+
+        if (rc != null) {
+            tb.append(rc.toString());
+        }
+
+        if (trafficModeType != null) {
+            tb.append(trafficModeType.toString());
+        }
+
+        if (networkAppearance != null) {
+            tb.append(networkAppearance.toString());
+        }
+
+        if (dpc != null) {
+            tb.append(dpc.toString());
+        }
+
+        if (serviceIndicators != null) {
+            tb.append(serviceIndicators.toString());
+        }
+
+        if (opcList != null) {
+            tb.append(opcList.toString());
+        }
+        tb.append(")");
+        return tb.toString();
+    }
+
+}

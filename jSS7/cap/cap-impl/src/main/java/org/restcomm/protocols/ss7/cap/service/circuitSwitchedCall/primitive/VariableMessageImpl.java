@@ -1,0 +1,171 @@
+package org.restcomm.protocols.ss7.cap.service.circuitSwitchedCall.primitive;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.mobicents.protocols.asn.AsnException;
+import org.mobicents.protocols.asn.AsnInputStream;
+import org.mobicents.protocols.asn.AsnOutputStream;
+import org.mobicents.protocols.asn.Tag;
+import org.restcomm.protocols.ss7.cap.api.CAPException;
+import org.restcomm.protocols.ss7.cap.api.CAPParsingComponentException;
+import org.restcomm.protocols.ss7.cap.api.CAPParsingComponentExceptionReason;
+import org.restcomm.protocols.ss7.cap.api.service.circuitSwitchedCall.primitive.VariableMessage;
+import org.restcomm.protocols.ss7.cap.api.service.circuitSwitchedCall.primitive.VariablePart;
+import org.restcomm.protocols.ss7.cap.primitives.SequenceBase;
+
+
+/**
+ *
+ * @author sergey vetyutnev
+ *
+ */
+@JacksonXmlRootElement(localName = "variableMessage")
+public class VariableMessageImpl extends SequenceBase implements VariableMessage {
+
+    public static final int _ID_elementaryMessageID = 0;
+    public static final int _ID_variableParts = 1;
+
+    public static final String _PrimitiveName = "VariableMessage";
+
+    private static final String ELEMENTARY_MESSAGE_ID = "elementaryMessageID";
+    private static final String VARIABLE_PARTS = "variableParts";
+
+    private int elementaryMessageID;
+    private ArrayList<VariablePart> variableParts;
+
+    public VariableMessageImpl() {
+        super("VariableMessage");
+    }
+
+    public VariableMessageImpl(int elementaryMessageID, ArrayList<VariablePart> variableParts) {
+        super("VariableMessage");
+
+        this.elementaryMessageID = elementaryMessageID;
+        this.variableParts = variableParts;
+    }
+
+    @Override
+    public int getElementaryMessageID() {
+        return elementaryMessageID;
+    }
+
+    @Override
+    public ArrayList<VariablePart> getVariableParts() {
+        return variableParts;
+    }
+
+    protected void _decode(AsnInputStream asnInputStream, int length) throws CAPParsingComponentException, IOException, AsnException {
+
+        this.elementaryMessageID = 0;
+        this.variableParts = null;
+        boolean elementaryMessageIDReceived = false;
+
+        AsnInputStream ais = asnInputStream.readSequenceStreamData(length);
+        while (true) {
+            if (ais.available() == 0)
+                break;
+
+            int tag = ais.readTag();
+
+            if (ais.getTagClass() == Tag.CLASS_CONTEXT_SPECIFIC) {
+                switch (tag) {
+                    case _ID_elementaryMessageID:
+                        this.elementaryMessageID = (int) ais.readInteger();
+                        elementaryMessageIDReceived = true;
+                        break;
+                    case _ID_variableParts:
+                        this.variableParts = new ArrayList<VariablePart>();
+
+                        AsnInputStream ais2 = ais.readSequenceStream();
+                        while (true) {
+                            if (ais2.available() == 0)
+                                break;
+
+                            int tag2 = ais2.readTag();
+                            if (ais2.getTagClass() != Tag.CLASS_CONTEXT_SPECIFIC || !ais2.isTagPrimitive())
+                                throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName
+                                        + ": bad tagClass or tag or is not primitive when decoding a variableParts SEQUENCE",
+                                        CAPParsingComponentExceptionReason.MistypedParameter);
+
+                            VariablePartImpl vp = new VariablePartImpl();
+                            ((VariablePartImpl) vp).decodeData(ais2, ais2.readLength());
+                            this.variableParts.add(vp);
+                        }
+                        break;
+
+                    default:
+                        ais.advanceElement();
+                        break;
+                }
+            } else {
+                ais.advanceElement();
+            }
+        }
+
+        if (elementaryMessageIDReceived == false)
+            throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName
+                    + ": elementaryMessageID is mandatory but not found", CAPParsingComponentExceptionReason.MistypedParameter);
+
+        if (this.variableParts == null)
+            throw new CAPParsingComponentException("Error while decoding " + _PrimitiveName
+                    + ": variableParts is mandatory but not found", CAPParsingComponentExceptionReason.MistypedParameter);
+    }
+
+    @Override
+    public void encodeData(AsnOutputStream asnOutputStream) throws CAPException {
+
+        if (this.variableParts == null)
+            throw new CAPException("Error while encoding " + _PrimitiveName + ": variableParts must not be null");
+
+        if (this.variableParts.size() < 1 || this.variableParts.size() > 5)
+            throw new CAPException("Error while encoding " + _PrimitiveName
+                    + ": variableParts count must be from 1 to 5, found: " + this.variableParts.size());
+
+        try {
+            asnOutputStream.writeInteger(Tag.CLASS_CONTEXT_SPECIFIC, _ID_elementaryMessageID, this.elementaryMessageID);
+
+            asnOutputStream.writeTag(Tag.CLASS_CONTEXT_SPECIFIC, false, _ID_variableParts);
+            int pos = asnOutputStream.StartContentDefiniteLength();
+            for (VariablePart vp : this.variableParts) {
+                ((VariablePartImpl) vp).encodeAll(asnOutputStream);
+            }
+            asnOutputStream.FinalizeContent(pos);
+
+        } catch (IOException e) {
+            throw new CAPException("IOException when encoding " + _PrimitiveName + ": " + e.getMessage(), e);
+        } catch (AsnException e) {
+            throw new CAPException("AsnException when encoding " + _PrimitiveName + ": " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(_PrimitiveName);
+        sb.append(" [");
+
+        sb.append("elementaryMessageID=");
+        sb.append(this.elementaryMessageID);
+
+        if (this.variableParts != null) {
+            sb.append(", variableParts=[");
+            for (VariablePart vp : this.variableParts) {
+                if (vp != null) {
+                    sb.append(vp.toString());
+                    sb.append(", ");
+                }
+            }
+            sb.append("]");
+        }
+
+        sb.append("]");
+
+        return sb.toString();
+    }
+}
+

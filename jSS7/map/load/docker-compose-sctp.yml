@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.minimal
+    image: jss7-map-load-sctp:latest
+    container_name: jss7-server
+    command: server
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+    sysctls:
+      - net.sctp.sctp_mem=4096 8192 12288
+      - net.sctp.sctp_rmem=4096 8192 12288
+      - net.sctp.sctp_wmem=4096 8192 12288
+    ports:
+      - "8011:8011"
+    environment:
+      - TEST_SERVER_CHANNEL_TYPE=sctp
+      - TEST_SERVER_HOST_IP=0.0.0.0
+      - TEST_SERVER_HOST_PORT=8011
+      - TEST_SERVER_PEER_IP=client
+      - TEST_SERVER_PEER_PORT=8012
+    networks:
+      - jss7-net
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.minimal
+    image: jss7-map-load-sctp:latest
+    container_name: jss7-client
+    command: client
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+    depends_on:
+      - server
+    environment:
+      - TEST_CLIENT_CHANNEL_TYPE=sctp
+      - TEST_CLIENT_HOST_IP=server
+      - TEST_CLIENT_HOST_PORT=8011
+      - TEST_CLIENT_PEER_IP=server
+      - TEST_CLIENT_PEER_PORT=8012
+      - TEST_CLIENT_NUM_OF_DIALOGS=10000
+      - TEST_CLIENT_CONCURRENT_DIALOG=1000
+    networks:
+      - jss7-net
+
+  # PCAP capture sidecar
+  tcpdump:
+    image: kaazing/tcpdump
+    container_name: jss7-tcpdump
+    network_mode: service:server
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./pcap-output:/pcap
+    command: -i any -w /pcap/jss7-test.pcap -s 0 sctp or port 8011 or port 8012
+
+networks:
+  jss7-net:
+    driver: bridge

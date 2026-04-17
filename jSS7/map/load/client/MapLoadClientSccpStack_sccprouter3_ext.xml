@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rule>
+	<id value="1"/>
+	<value ruleType="Solitary" loadSharingAlgo="Bit0" originatingType="RemoteOriginated" mask="K" paddress="1" saddress="-1" networkId="0">
+		<patternSccpAddress value="org.restcomm.protocols.ss7.sccp.impl.parameter.SccpAddressImpl#204805934"/>
+	</value>
+	<id value="2"/>
+	<value ruleType="Solitary" loadSharingAlgo="Bit0" originatingType="LocalOriginated" mask="K" paddress="2" saddress="-1" networkId="0">
+		<patternSccpAddress value="org.restcomm.protocols.ss7.sccp.impl.parameter.SccpAddressImpl#204805934"/>
+	</value>
+</rule>
+<routingAddress>
+	<id value="1"/>
+	<sccpAddress value="org.restcomm.protocols.ss7.sccp.impl.parameter.SccpAddressImpl#913065088"/>
+	<id value="2"/>
+	<sccpAddress value="org.restcomm.protocols.ss7.sccp.impl.parameter.SccpAddressImpl#746280996"/>
+</routingAddress>

@@ -1,4 +1,4 @@
-﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -9,7 +9,7 @@
 
 	<artifactId>ss7-parent</artifactId>
 	<groupId>org.restcomm.protocols.ss7</groupId>
-	<version>9.2.8</version>
+	<version>9.2.9</version>
 
 	<packaging>pom</packaging>
 
@@ -40,7 +40,7 @@
 		<!-- restcomm but not strictly ss7 -->
 		<asn.version>2.2.0-143</asn.version>
 		<stream.version>1.0.0.CR1</stream.version>
-		<sctp.version>2.0.13-SNAPSHOT</sctp.version>
+		<sctp.version>2.0.13</sctp.version>
 		<commons.version>1.0.0.CR1</commons.version>
 		<netty.version>4.2.11.Final</netty.version>
 		<ss7.restcomm.version>8.2.6-SNAPSHOT</ss7.restcomm.version>
@@ -52,6 +52,7 @@
 	</properties>
 
 	<modules>
+		<module>asn</module>
 		<module>scheduler</module>
 		<module>congestion</module>
 		<module>statistics</module>
@@ -79,7 +80,7 @@
 			<dependency>
 				<groupId>org.mobicents.protocols.asn</groupId>
 				<artifactId>asn</artifactId>
-				<version>${asn.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 			<!-- STREAM -->
 			<dependency>
@@ -445,6 +446,20 @@
 	</licenses>
 
 	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>bundle-manifest</id>
+							<phase>none</phase>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -466,7 +481,7 @@
 				<executions>
 					<execution>
 						<id>check-style</id>
-						<phase>compile</phase>
+						<phase>none</phase>
 						<goals>
 							<goal>checkstyle</goal>
 						</goals>
@@ -530,6 +545,16 @@
 				</executions>
 				<configuration combine.self="override">
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>bundle-manifest</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rule>
+  <id value="11"/>
+  <value ruleType="Solitary" loadSharingAlgo="Bit0" originatingType="LocalOriginated" mask="K" paddress="1" saddress="-1" networkId="3">
+    <patternSccpAddress pc="123" ssn="0">
+      <ai value="9"/>
+      <gt type="GT0010" tt="1" digits="*"/>
+    </patternSccpAddress>
+  </value>
+</rule>
+<routingAddress>
+  <id value="1"/>
+    <sccpAddress pc="123" ssn="0">
+      <ai value="9"/>
+      <gt type="GT0010" tt="1" digits="123456789"/>
+    </sccpAddress>
+</routingAddress>

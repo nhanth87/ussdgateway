@@ -1,0 +1,133 @@
+package org.restcomm.protocols.ss7.cap.service.circuitSwitchedCall.primitive;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+
+import org.restcomm.protocols.ss7.cap.api.service.circuitSwitchedCall.primitive.VariablePartPrice;
+import org.restcomm.protocols.ss7.cap.primitives.OctetStringBase;
+
+
+/**
+ *
+ * @author sergey vetyutnev
+ *
+ */
+@JacksonXmlRootElement(localName = "variablePartPrice")
+public class VariablePartPriceImpl extends OctetStringBase implements VariablePartPrice {
+
+    private static final String PRICE_INTEGER_PART = "priceIntegerPart";
+    private static final String PRICE_HUNDREDTH_PART = "priceHundredthPart";
+
+    public VariablePartPriceImpl() {
+        super(4, 4, "VariablePartPrice");
+    }
+
+    public VariablePartPriceImpl(byte[] data) {
+        super(4, 4, "VariablePartPrice");
+
+        this.data = data;
+    }
+
+    public VariablePartPriceImpl(double price) {
+        super(4, 4, "VariablePartPrice");
+
+        setPrice(price);
+    }
+
+    protected void setPrice(double price) {
+        this.data = new byte[4];
+
+        long val = (long) (price * 100);
+        if (val < 0)
+            val = -val;
+        this.data[0] = (byte) this.encodeByte((int) (val / 1000000 - (val / 100000000) * 100));
+        this.data[1] = (byte) this.encodeByte((int) (val / 10000 - (val / 1000000) * 100));
+        this.data[2] = (byte) this.encodeByte((int) (val / 100 - (val / 10000) * 100));
+        this.data[3] = (byte) this.encodeByte((int) (val - (val / 100) * 100));
+    }
+
+    public VariablePartPriceImpl(int integerPart, int hundredthPart) {
+        super(4, 4, "VariablePartPrice");
+
+        setPriceIntegerHundredthPart(integerPart, hundredthPart);
+    }
+
+    protected void setPriceIntegerHundredthPart(int integerPart, int hundredthPart) {
+        this.data = new byte[4];
+
+        long val = ((long) integerPart * 100 + hundredthPart);
+        if (val < 0)
+            val = -val;
+        this.data[0] = (byte) this.encodeByte((int) (val / 1000000 - (val / 100000000) * 100));
+        this.data[1] = (byte) this.encodeByte((int) (val / 10000 - (val / 1000000) * 100));
+        this.data[2] = (byte) this.encodeByte((int) (val / 100 - (val / 10000) * 100));
+        this.data[3] = (byte) this.encodeByte((int) (val - (val / 100) * 100));
+    }
+
+    @Override
+    public byte[] getData() {
+        return this.data;
+    }
+
+    @Override
+    public double getPrice() {
+        if (this.data == null || this.data.length != 4)
+            return Double.NaN;
+
+        double res = this.decodeByte(data[0]) * 10000 + this.decodeByte(data[1]) * 100 + this.decodeByte(data[2])
+                + (double) this.decodeByte(data[3]) / 100.0;
+        return res;
+    }
+
+    @Override
+    public int getPriceIntegerPart() {
+
+        if (this.data == null || this.data.length != 4)
+            return 0;
+
+        int res = this.decodeByte(data[0]) * 10000 + this.decodeByte(data[1]) * 100 + this.decodeByte(data[2]);
+        return res;
+    }
+
+    @Override
+    public int getPriceHundredthPart() {
+
+        if (this.data == null || this.data.length != 4)
+            return 0;
+
+        int res = this.decodeByte(data[3]);
+        return res;
+    }
+
+    private int decodeByte(int bt) {
+        return (bt & 0x0F) * 10 + ((bt & 0xF0) >> 4);
+    }
+
+    private int encodeByte(int val) {
+        return (val / 10) | (val % 10) << 4;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(_PrimitiveName);
+        sb.append(" [");
+
+        double val = this.getPrice();
+        if (!Double.isNaN(val)) {
+            sb.append("price=");
+            sb.append(val);
+            sb.append(", integerPart=");
+            sb.append(this.getPriceIntegerPart());
+            sb.append(", hundredthPart=");
+            sb.append(this.getPriceHundredthPart());
+        }
+
+        sb.append("]");
+
+        return sb.toString();
+    }
+}
+

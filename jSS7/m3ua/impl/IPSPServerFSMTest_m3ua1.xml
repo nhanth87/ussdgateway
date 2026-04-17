@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<m3uaConfig>
+  <timeBetweenHeartbeat>10000</timeBetweenHeartbeat>
+  <statisticsEnabled>false</statisticsEnabled>
+  <statisticsTaskDelay>5000</statisticsTaskDelay>
+  <statisticsTaskPeriod>5000</statisticsTaskPeriod>
+  <routingKeyManagementEnabled>false</routingKeyManagementEnabled>
+  <useLsbForLinksetSelection>false</useLsbForLinksetSelection>
+  <aspFactories/>
+  <appServers/>
+  <route/>
+</m3uaConfig>
